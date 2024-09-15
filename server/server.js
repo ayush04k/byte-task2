@@ -5,6 +5,13 @@ const auth = require('./auth');
 const api = require('./api');
 const path = require('path');
 const rootDir = path.join(__dirname, '..');
+const express = require('express');
+const helmet = require('helmet');
+const app = express();
+
+app.use(helmet());
+
+// Your other middleware and routes go here
 
 const app = express();
 
